@@ -15,4 +15,3 @@ function copyCode() {
       console.error("Kopiëren mislukt:", err);
     });
 }
-

@@ -3,9 +3,16 @@ function copyCode() {
   navigator.clipboard
     .writeText(code)
     .then(() => {
-      alert("Code gekopieerd!");
+      const copyBtn = document.getElementById("copy-btn");
+      if (copyBtn) {
+        copyBtn.textContent = "Gekopieerd!";
+        setTimeout(() => {
+          copyBtn.textContent = "Kopieer code";
+        }, 2000);
+      }
     })
     .catch((err) => {
       console.error("Kopiëren mislukt:", err);
     });
 }
+

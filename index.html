@@ -67,7 +67,8 @@
             </p>
             <div class="pong-code-container">
                 <button class="pong-copy-button" onclick="copyCode()">Kopieer code</button>
-                <pre><code>
+                <pre class="pong-code-block">
+                    <code>
                     &lt;!DOCTYPE html&gt;
                     &lt;html lang=&quot;nl&quot;&gt;
                     
@@ -98,6 +99,140 @@
                     &lt;/html&gt;
                     </code></pre>
             </div>
+
+            <h3>2.2 CSS</h3>
+            <p>
+                We gaan nu onze <strong>css</strong> toevoegen. Dit zal ervoor zorgen
+                dat ons <strong>spel</strong> zichtbaar wordt en onze titel in
+                het midden staat.
+            </p>
+            <p>
+                Ga in vs code naar je <strong>css folder</strong> en open
+                <strong>main.css</strong> en plak onderstaande code hierin en
+                <strong>bewaar dit bestand</strong>.
+            </p>
+
+            <div class="pong-code-container">
+                <button class="pong-copy-button" onclick="copyCode('pong-css')">Kopieer code</button>
+                <pre class="pong-code-block">
+              <code>
+                * {
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                  }
+              
+                body {
+                    background-color: red;
+                    background-image: linear-gradient(
+                            to bottom right,
+                            hsl(0, 100%, 50%),
+                            hsl(60, 100%, 50%)
+                        );
+                    background-repeat: no-repeat;
+                    max-width: 77rem;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+              
+                .main {
+                    display: flex;
+                    max-width: 60rem;
+                    margin: 0 auto;
+                    padding: 1.5rem;
+                    font-family: "work sans";
+                    font-size: 1.5rem;
+                    padding: 1.5rem;
+                }
+              
+                .main-child {
+                    width: 40rem;
+                }
+              
+                .main a {
+                    color: black;
+                    text-decoration: none;
+                    font-family: "work sans";
+                }
+              
+                .board {
+                    height: 85vh;
+                    width: 80vw;
+                    background-color: black;
+                    border-radius: 0.875rem;
+                }
+              
+                .ball {
+                    height: 30px;
+                    width: 30px;
+                    border-radius: 50%;
+                    position: fixed;
+                    top: calc(50% - 15px);
+                    left: calc(50% - 15px);
+                }
+              
+                .ball_effect {
+                    height: 100%;
+                    width: 100%;
+                    border-radius: 100px;
+                    background-color: white;
+                }
+              
+                @keyframes spinBall {
+                    100% {
+                        -webkit-transform: rotate(360deg);
+                        transform: rotate(360deg);
+                    }
+                }
+              
+                .paddle {
+                    height: 100px;
+                    width: 18px;
+                    position: fixed;
+                }
+              
+                .paddle_1 {
+                    top: calc(7.5vh + 55px);
+                    left: calc(10vw + 30px);
+                    background-color: white;
+                }
+              
+                .paddle_2 {
+                    top: calc(85vh + 7.5vh - 100px - 55px);
+                    right: calc(10vw + 30px);
+                    background-color: white;
+                }
+              
+                .player_1_score {
+                    height: 50px;
+                    width: 50px;
+                    color: white;
+                    position: fixed;
+                    left: 30vw;
+                    margin-top: 30px;
+                }
+              
+                .player_2_score {
+                    height: 50px;
+                    width: 50px;
+                    color: white;
+                    position: fixed;
+                    left: 70vw;
+                    margin-top: 30px;
+                }
+              
+                .message {
+                    position: fixed;
+                    height: 10vh;
+                    width: 30vw;
+                    color: white;
+                    left: 38vw;
+                    margin: 30px auto auto auto;
+                }
+            </code>
+                </pre>
+            </div>
+
 
         </div>
     </main>

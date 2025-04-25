@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pong | Tutorial</title>
-    <link rel="stylesheet" href="./styles/css/reset.css">
-    <link rel="stylesheet" href="./styles/css/main.css">
+    <link rel="stylesheet" href="styles/css/reset.css">
+    <link rel="stylesheet" href="styles/css/main.css">
+    <link rel="stylesheet" href="styles/css/copy.css">
 </head>
 
 <body>
@@ -56,9 +57,35 @@
                 <strong>live-server</strong>.
             </p>
             <img src="styles/images/live-server.png" alt="live server">
+
+            <h2>STAP 2 - HTML & CSS</h2>
+            <h3>2.1 HTML</h3>
+
+            <p>
+                Ga naar je <strong>index.html</strong> file en plak onderstaande code
+                hierin en <strong>bewaar</strong> dit bestand.
+            </p>
+            <div class="pong-code-container">
+                <button class="pong-copy-button" onclick="copyCode()">Kopieer code</button>
+                <pre class="pong-code-block">
+                    <code id="pong-code">&lt;div class=&quot;board&quot;&gt;
+                    &lt;div class='ball'&gt;
+                    &lt;div class=&quot;ball_effect&quot;&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+            &lt;div class=&quot;paddle_1 paddle&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;paddle_2 paddle&quot;&gt;&lt;/div&gt;
+            &lt;h1 class=&quot;player_1_score&quot;&gt;0&lt;/h1&gt;
+            &lt;h1 class=&quot;player_2_score&quot;&gt;0&lt;/h1&gt;
+            &lt;h1 class=&quot;message&quot;&gt;
+                Druk &quot;Enter&quot; om te beginnen
+            &lt;/h1&gt;
+        &lt;/div&gt;</code>
+                </pre>
+            </div>
+
         </div>
     </main>
-
+    <script src="js/copy.js"></script>
 </body>
 
 </html>

@@ -11,232 +11,719 @@
 </head>
 
 <body>
+    <header class="header">
+        <div class="header__content">
+            <h1 class="header__title">Pong Tutorial</h1>
+            <nav class="header__nav">
+                <a href="game.html" class="header__link">Speel Pong</a>
+            </nav>
+        </div>
+    </header>
 
-    <main>
-        <header>
-            <h1>Pong</h1>
-            <a href="game.html">Game</a>
-        </header>
-        <div class="main-content">
-            <p>
+    <main class="main container">
+        <section class="main__section">
+            <h1 class="main__title">Pong</h1>
+            <p class="main__text">
                 Pong - Klassiek Twee-Speler Arcade Spel
                 Speel de legendarische arcade-klassieker Pong met z'n tweeën op één pc! Bestuur je paddle met de
                 pijltjestoetsen (speler 1: Z/S, speler 2: ↑/↓) en probeer de bal langs je tegenstander te krijgen. Wie
                 het eerst 10 punten haalt, wint!
             </p>
-            <p>Hier hebben we 3 codeertalen voor nodig, namelijk</p>
+            <p class="main__text">Hier hebben we 3 codeertalen voor nodig, namelijk</p>
 
-            <ul>
-                <li class="list__item">CSS</li>
-                <li class="list__item">HTML</li>
-                <li class="list__item">Javascript</li>
+            <ul class="main__list">
+                <li class="main__list-item">CSS</li>
+                <li class="main__list-item">HTML</li>
+                <li class="main__list-item">Javascript</li>
             </ul>
+        </section>
 
-            <h2>STAP 1 - Mappenstructuur</h2>
+        <section class="step">
+            <span class="step__number">1</span>
+            <h2 class="step__title">Mappenstructuur</h2>
 
-            <p>
-                We hebben een code-editor nodig. In de workshop gebruiken we
-                <a class="link" target="_blank" href="https://code.visualstudio.com/">Visual studio code</a>.
-            </p>
+            <div class="step__content">
+                <p class="main__text">
+                    We hebben een code-editor nodig. In de workshop gebruiken we
+                    <a class="main__link" target="_blank" href="https://code.visualstudio.com/">Visual studio code</a>.
+                </p>
 
-            <h3>1.1 Open VS Code</h3>
-            <p>Start een nieuw project:</p>
-            <img src="styles/images/vscode-start.png" alt="vs code start">
+                <h3 class="main__subtitle">1.1 Open VS Code</h3>
+                <p class="main__text">Start een nieuw project:</p>
+                <img class="main__image" src="styles/images/vscode-start.png" alt="vs code start">
 
-            <h3>1.2 Maak een folderstructuur</h3>
-            <p>Maak dezelfde folderstructuur na zoals in de afbeelding</p>
-            <img src="styles/images/folderstructuur.png" alt="folderstructuur">
+                <h3 class="main__subtitle">1.2 Maak een folderstructuur</h3>
+                <p class="main__text">Maak dezelfde folderstructuur na zoals in de afbeelding</p>
+                <img class="main__image" src="styles/images/folderstructuur.png" alt="folderstructuur">
 
-            <p>Gebruik volgende icoontje bovenaan de folderstructuur om bestanden en mappen aan te maken</p>
-            <img src="styles/images/folderknoppen.png" alt="folderknoppen">
+                <p class="main__text">Gebruik volgende icoontje bovenaan de folderstructuur om bestanden en mappen aan
+                    te maken</p>
+                <img class="main__image" src="styles/images/folderknoppen.png" alt="folderknoppen">
 
-            <h3>1.3 Installeer de "live-server" extensie </h3>
+                <h3 class="main__subtitle">1.3 Installeer de "live-server" extensie </h3>
 
-            <p>
-                Ga naar extensies (links op vs code) en zoek naar de extensie
-                <strong>live-server</strong>.
-            </p>
-            <img src="styles/images/live-server.png" alt="live server">
+                <p class="main__text">
+                    Ga naar extensies (links op vs code) en zoek naar de extensie
+                    <strong>live-server</strong>.
+                </p>
+                <img class="main__image" src="styles/images/live-server.png" alt="live server">
+            </div>
+        </section>
 
-            <h2>STAP 2 - HTML & CSS</h2>
-            <h3>2.1 HTML</h3>
+        <section class="step">
+            <span class="step__number">2</span>
+            <h2 class="step__title">HTML & CSS</h2>
 
-            <p>
-                Ga naar je <strong>index.html</strong> file en plak onderstaande code
-                hierin en <strong>bewaar</strong> dit bestand.
-            </p>
-            <div class="pong-code-container">
-                <button class="pong-copy-button" onclick="copyCode()">Kopieer code</button>
-                <pre class="pong-code-block">
-                    <code>
-                    &lt;!DOCTYPE html&gt;
-                    &lt;html lang=&quot;nl&quot;&gt;
-                    
-                    &lt;head&gt;
-                        &lt;meta charset=&quot;UTF-8&quot;&gt;
-                        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-                        &lt;title&gt;Pong | Tutorial&lt;/title&gt;
-                        &lt;link rel=&quot;stylesheet&quot; href=&quot;styles/css/reset.css&quot;&gt;
-                        &lt;link rel=&quot;stylesheet&quot; href=&quot;styles/css/main.css&quot;&gt;
-                    &lt;/head&gt;
-                    &lt;body&gt;
-                        &lt;main&gt;
-                            <code id="pong-code">&lt;div class=&quot;board&quot;&gt;
-                                &lt;div class='ball'&gt;
-                                    &lt;div class=&quot;ball_effect&quot;&gt;&lt;/div&gt;
+            <div class="step__content">
+                <h3 class="main__subtitle">2.1 HTML</h3>
+
+                <p class="main__text">
+                    Ga naar je <strong>index.html</strong> file en plak onderstaande code
+                    hierin en <strong>bewaar</strong> dit bestand.
+                </p>
+                <div class="code-container">
+                    <div class="code-container__header">
+                        <span>HTML Code</span>
+                        <button class="code-container__button" onclick="copyCode()">Kopieer code</button>
+                    </div>
+                    <pre class="code-container__content">
+                        <code>
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html lang=&quot;nl&quot;&gt;
+                        
+                        &lt;head&gt;
+                            &lt;meta charset=&quot;UTF-8&quot;&gt;
+                            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+                            &lt;title&gt;Pong | Tutorial&lt;/title&gt;
+                            &lt;link rel=&quot;stylesheet&quot; href=&quot;styles/css/reset.css&quot;&gt;
+                            &lt;link rel=&quot;stylesheet&quot; href=&quot;styles/css/main.css&quot;&gt;
+                        &lt;/head&gt;
+                        &lt;body&gt;
+                            &lt;main&gt;
+                                <code id="pong-code">&lt;div class=&quot;board&quot;&gt;
+                                    &lt;div class='ball'&gt;
+                                        &lt;div class=&quot;ball_effect&quot;&gt;&lt;/div&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class=&quot;paddle_1 paddle&quot;&gt;&lt;/div&gt;
+                                    &lt;div class=&quot;paddle_2 paddle&quot;&gt;&lt;/div&gt;
+                                    &lt;h1 class=&quot;player_1_score&quot;&gt;0&lt;/h1&gt;
+                                    &lt;h1 class=&quot;player_2_score&quot;&gt;0&lt;/h1&gt;
+                                    &lt;h1 class=&quot;message&quot;&gt;
+                                    Druk &quot;Enter&quot; om te beginnen
+                                    &lt;/h1&gt;
                                 &lt;/div&gt;
-                                &lt;div class=&quot;paddle_1 paddle&quot;&gt;&lt;/div&gt;
-                                &lt;div class=&quot;paddle_2 paddle&quot;&gt;&lt;/div&gt;
-                                &lt;h1 class=&quot;player_1_score&quot;&gt;0&lt;/h1&gt;
-                                &lt;h1 class=&quot;player_2_score&quot;&gt;0&lt;/h1&gt;
-                                &lt;h1 class=&quot;message&quot;&gt;
-                                Druk &quot;Enter&quot; om te beginnen
-                                &lt;/h1&gt;
-                            &lt;/div&gt;
-                        &lt;/main&gt;
-                    &lt;/body&gt;
-                    
-                    &lt;/html&gt;
-                    </code></pre>
-            </div>
+                            &lt;/main&gt;
+                        &lt;/body&gt;
+                        
+                        &lt;/html&gt;
+                        </code></pre>
+                </div>
 
-            <h3>2.2 CSS</h3>
-            <p>
-                We gaan nu onze <strong>css</strong> toevoegen. Dit zal ervoor zorgen
-                dat ons <strong>spel</strong> zichtbaar wordt en onze titel in
-                het midden staat.
-            </p>
-            <p>
-                Ga in vs code naar je <strong>css folder</strong> en open
-                <strong>main.css</strong> en plak onderstaande code hierin en
-                <strong>bewaar dit bestand</strong>.
-            </p>
+                <h3 class="main__subtitle">2.2 CSS</h3>
+                <p class="main__text">
+                    We gaan nu onze <strong>css</strong> toevoegen. Dit zal ervoor zorgen
+                    dat ons <strong>spel</strong> zichtbaar wordt en onze titel in
+                    het midden staat.
+                </p>
+                <p class="main__text">
+                    Ga in vs code naar je <strong>css folder</strong> en open
+                    <strong>main.css</strong> en plak onderstaande code hierin en
+                    <strong>bewaar dit bestand</strong>.
+                </p>
 
-            <div class="pong-code-container">
-                <button class="pong-copy-button" onclick="copyCode('pong-css')">Kopieer code</button>
-                <pre class="pong-code-block">
-              <code>
-                * {
-                    margin: 0;
-                    padding: 0;
-                    box-sizing: border-box;
-                  }
-              
-                body {
-                    background-color: red;
-                    background-image: linear-gradient(
-                            to bottom right,
-                            hsl(0, 100%, 50%),
-                            hsl(60, 100%, 50%)
-                        );
-                    background-repeat: no-repeat;
-                    max-width: 77rem;
-                    margin-left: auto;
-                    margin-right: auto;
-                }
-              
-                .main {
-                    display: flex;
-                    max-width: 60rem;
-                    margin: 0 auto;
-                    padding: 1.5rem;
-                    font-family: "work sans";
-                    font-size: 1.5rem;
-                    padding: 1.5rem;
-                }
-              
-                .main-child {
-                    width: 40rem;
-                }
-              
-                .main a {
-                    color: black;
-                    text-decoration: none;
-                    font-family: "work sans";
-                }
-              
-                .board {
-                    height: 85vh;
-                    width: 80vw;
-                    background-color: black;
-                    border-radius: 0.875rem;
-                }
-              
-                .ball {
-                    height: 30px;
-                    width: 30px;
-                    border-radius: 50%;
-                    position: fixed;
-                    top: calc(50% - 15px);
-                    left: calc(50% - 15px);
-                }
-              
-                .ball_effect {
-                    height: 100%;
-                    width: 100%;
-                    border-radius: 100px;
-                    background-color: white;
-                }
-              
-                @keyframes spinBall {
-                    100% {
-                        -webkit-transform: rotate(360deg);
-                        transform: rotate(360deg);
+                <div class="code-container">
+                    <div class="code-container__header">
+                        <span>CSS Code</span>
+                        <button class="code-container__button" onclick="copyCode('pong-css')">Kopieer code</button>
+                    </div>
+                    <pre class="code-container__content">
+                  <code>
+                    * {
+                        margin: 0;
+                        padding: 0;
+                        box-sizing: border-box;
+                      }
+                  
+                    body {
+                        background-color: red;
+                        background-image: linear-gradient(
+                                to bottom right,
+                                hsl(0, 100%, 50%),
+                                hsl(60, 100%, 50%)
+                            );
+                        background-repeat: no-repeat;
+                        max-width: 77rem;
+                        margin-left: auto;
+                        margin-right: auto;
                     }
-                }
-              
-                .paddle {
-                    height: 100px;
-                    width: 18px;
-                    position: fixed;
-                }
-              
-                .paddle_1 {
-                    top: calc(7.5vh + 55px);
-                    left: calc(10vw + 30px);
-                    background-color: white;
-                }
-              
-                .paddle_2 {
-                    top: calc(85vh + 7.5vh - 100px - 55px);
-                    right: calc(10vw + 30px);
-                    background-color: white;
-                }
-              
-                .player_1_score {
-                    height: 50px;
-                    width: 50px;
-                    color: white;
-                    position: fixed;
-                    left: 30vw;
-                    margin-top: 30px;
-                }
-              
-                .player_2_score {
-                    height: 50px;
-                    width: 50px;
-                    color: white;
-                    position: fixed;
-                    left: 70vw;
-                    margin-top: 30px;
-                }
-              
-                .message {
-                    position: fixed;
-                    height: 10vh;
-                    width: 30vw;
-                    color: white;
-                    left: 38vw;
-                    margin: 30px auto auto auto;
-                }
-            </code>
-                </pre>
+                  
+                    .main {
+                        display: flex;
+                        max-width: 60rem;
+                        margin: 0 auto;
+                        padding: 1.5rem;
+                        font-family: "work sans";
+                        font-size: 1.5rem;
+                        padding: 1.5rem;
+                    }
+                  
+
+                    .main a {
+                        color: black;
+                        text-decoration: none;
+                        font-family: "work sans";
+                    }
+                  
+
+                    .board {
+                        height: 85vh;
+                        width: 80vw;
+                        background-color: black;
+                        border-radius: 0.875rem;
+                    }
+                  
+
+                    .ball {
+                        height: 30px;
+                        width: 30px;
+                        border-radius: 50%;
+                        position: fixed;
+                        top: calc(50% - 15px);
+                        left: calc(50% - 15px);
+                    }
+                  
+
+                    .ball_effect {
+                        height: 100%;
+                        width: 100%;
+                        border-radius: 100px;
+                        background-color: white;
+                    }
+                  
+
+                    @keyframes spinBall {
+                        100% {
+                            -webkit-transform: rotate(360deg);
+                            transform: rotate(360deg);
+                        }
+                    }
+                  
+
+                    .paddle {
+                        height: 100px;
+                        width: 18px;
+                        position: fixed;
+                    }
+                  
+
+                    .paddle_1 {
+                        top: calc(7.5vh + 55px);
+                        left: calc(10vw + 30px);
+                        background-color: white;
+                    }
+                  
+
+                    .paddle_2 {
+                        top: calc(85vh + 7.5vh - 100px - 55px);
+                        right: calc(10vw + 30px);
+                        background-color: white;
+                    }
+                  
+
+                    .player_1_score {
+                        height: 50px;
+                        width: 50px;
+                        color: white;
+                        position: fixed;
+                        left: 30vw;
+                        margin-top: 30px;
+                    }
+                  
+
+                    .player_2_score {
+                        height: 50px;
+                        width: 50px;
+                        color: white;
+                        position: fixed;
+                        left: 70vw;
+                        margin-top: 30px;
+                    }
+                  
+
+                    .message {
+                        position: fixed;
+                        height: 10vh;
+                        width: 30vw;
+                        color: white;
+                        left: 38vw;
+                        margin: 30px auto auto auto;
+                    }
+                </code>
+                    </pre>
+                </div>
             </div>
+        </section>
 
+        <section class="step">
+            <span class="step__number">3</span>
+            <h2 class="step__title">Javascript</h2>
+            <div class="step__content">
+                <h3 class="main__subtitle">3.1 De basis van het spel</h3>
+                <p class="main__text">
+                    Maak een nieuw bestand aan in de js map genaamd <strong>main.js</strong>. Dit bestand zorgt voor de
+                    werking van ons spel.
+                    Hieronder leggen we stap voor stap uit wat elke regel code doet.
+                </p>
 
-            <h2>STAP 3 - Javascript</h2>
-            <h3>3.1</h3>
-        </div>
+                <h3 class="main__subtitle">3.2 Variabelen instellen</h3>
+                <p class="main__text">
+                    Eerst moeten we alle onderdelen van het spel in JavaScript definiëren. Dit doen we door ze op te
+                    slaan in variabelen.
+                </p>
+
+                <div class="code-container">
+                    <div class="code-container__header">
+                        <span>JavaScript Code - Variabelen</span>
+                        <button class="code-container__button" onclick="copyCode('js-vars')">Kopieer code</button>
+                    </div>
+                    <pre class="code-container__content">
+                        <code id="js-vars">
+let gameState = 'start'; 
+let paddle_1 = document.querySelector('.paddle_1'); 
+let paddle_2 = document.querySelector('.paddle_2'); 
+let board = document.querySelector('.board'); 
+let initial_ball = document.querySelector('.ball'); 
+let ball = document.querySelector('.ball'); 
+let score_1 = document.querySelector('.player_1_score'); 
+let score_2 = document.querySelector('.player_2_score'); 
+let message = document.querySelector('.message'); 
+let paddle_1_coord = paddle_1.getBoundingClientRect(); 
+let paddle_2_coord = paddle_2.getBoundingClientRect(); 
+let initial_ball_coord = ball.getBoundingClientRect(); 
+let ball_coord = initial_ball_coord; 
+let board_coord = board.getBoundingClientRect(); 
+let paddle_common = document.querySelector('.paddle').getBoundingClientRect();</code>
+                    </pre>
+                </div>
+
+                <p class="main__text">
+                    <strong>Wat gebeurt hier?</strong><br>
+                    We maken variabelen aan die verwijzen naar de HTML-elementen op onze pagina:
+                </p>
+                <ul class="main__list">
+                    <li class="main__list-item"><code>gameState</code> - houdt bij of het spel gestart is of niet</li>
+                    <li class="main__list-item"><code>paddle_1</code> en <code>paddle_2</code> - de twee speelbalken
+                    </li>
+                    <li class="main__list-item"><code>board</code> - het speelveld</li>
+                    <li class="main__list-item"><code>ball</code> - de bal die heen en weer stuitert</li>
+                    <li class="main__list-item"><code>score_1</code> en <code>score_2</code> - de scoreweergave van
+                        beide spelers</li>
+                    <li class="main__list-item"><code>message</code> - het tekstbericht dat instructies toont</li>
+                </ul>
+
+                <p class="main__text">
+                    Met <code>getBoundingClientRect()</code> halen we de exacte positie en afmetingen op van deze
+                    elementen.
+                    Dit hebben we nodig om te berekenen wanneer de bal een paddle raakt of het speelveld verlaat.
+                </p>
+
+                <h3 class="main__subtitle">3.3 Bal beweging instellen</h3>
+                <p class="main__text">
+                    Nu moeten we bepalen hoe de bal beweegt. We stellen een aantal variabelen in die de richting en
+                    snelheid bepalen:
+                </p>
+
+                <div class="code-container">
+                    <div class="code-container__header">
+                        <span>JavaScript Code - Bal beweging</span>
+                        <button class="code-container__button" onclick="copyCode('js-ball')">Kopieer code</button>
+                    </div>
+                    <pre class="code-container__content">
+                        <code id="js-ball">
+let dx = Math.floor(Math.random() * 4) + 3; 
+let dy = Math.floor(Math.random() * 4) + 3; 
+let dxd = Math.floor(Math.random() * 2); 
+let dyd = Math.floor(Math.random() * 2);</code>
+                    </pre>
+                </div>
+
+                <p class="main__text">
+                    <strong>Wat betekenen deze variabelen?</strong>
+                </p>
+                <ul class="main__list">
+                    <li class="main__list-item"><code>dx</code> - de snelheid van de bal op de x-as (horizontaal),
+                        tussen 3-6 pixels per beweging</li>
+                    <li class="main__list-item"><code>dy</code> - de snelheid van de bal op de y-as (verticaal), tussen
+                        3-6 pixels per beweging</li>
+                    <li class="main__list-item"><code>dxd</code> - de richting op de x-as: 0 = naar links, 1 = naar
+                        rechts</li>
+                    <li class="main__list-item"><code>dyd</code> - de richting op de y-as: 0 = naar boven, 1 = naar
+                        beneden</li>
+                </ul>
+
+                <p class="main__text">
+                    Door <code>Math.random()</code> te gebruiken, krijgt de bal elke keer dat het spel start een andere
+                    snelheid en richting.
+                    <code>Math.floor()</code> rondt het getal naar beneden af naar een geheel getal.
+                </p>
+
+                <h3 class="main__subtitle">3.4 Bediening van het spel</h3>
+                <p class="main__text">
+                    Nu zorgen we ervoor dat spelers het spel kunnen bedienen. We gebruiken een <strong>event
+                        listener</strong> die luistert naar toetsaanslagen:
+                </p>
+
+                <div class="code-container">
+                    <div class="code-container__header">
+                        <span>JavaScript Code - Event Listener</span>
+                        <button class="code-container__button" onclick="copyCode('js-events')">Kopieer code</button>
+                    </div>
+                    <pre class="code-container__content">
+                        <code id="js-events">
+document.addEventListener('keydown', (e) => { 
+  if (e.key == 'Enter') { 
+    gameState = gameState == 'start' ? 'play' : 'start'; 
+    if (gameState == 'play') { 
+      message.innerHTML = 'Game Started'; 
+      message.style.left = 42 + 'vw'; 
+      requestAnimationFrame(() => { 
+        dx = Math.floor(Math.random() * 4) + 3; 
+        dy = Math.floor(Math.random() * 4) + 3; 
+        dxd = Math.floor(Math.random() * 2); 
+        dyd = Math.floor(Math.random() * 2); 
+        moveBall(dx, dy, dxd, dyd); 
+      }); 
+    } 
+  } 
+  // Besturingstoetsen voor de paddles
+  if (gameState == 'play') { 
+    // Paddle 1 besturing (Z/S toetsen)
+    if (e.key == 'z') { 
+      paddle_1.style.top = 
+        Math.max( 
+          board_coord.top, 
+          paddle_1_coord.top - window.innerHeight * 0.06 
+        ) + 'px'; 
+      paddle_1_coord = paddle_1.getBoundingClientRect(); 
+    } 
+    if (e.key == 's') { 
+      paddle_1.style.top = 
+        Math.min( 
+          board_coord.bottom - paddle_common.height, 
+          paddle_1_coord.top + window.innerHeight * 0.06 
+        ) + 'px'; 
+      paddle_1_coord = paddle_1.getBoundingClientRect(); 
+    } 
+    
+    // Paddle 2 besturing (pijltjestoetsen)
+    if (e.key == 'ArrowUp') { 
+      paddle_2.style.top = 
+        Math.max( 
+          board_coord.top, 
+          paddle_2_coord.top - window.innerHeight * 0.1 
+        ) + 'px'; 
+      paddle_2_coord = paddle_2.getBoundingClientRect(); 
+    } 
+    if (e.key == 'ArrowDown') { 
+      paddle_2.style.top = 
+        Math.min( 
+          board_coord.bottom - paddle_common.height, 
+          paddle_2_coord.top + window.innerHeight * 0.1 
+        ) + 'px'; 
+      paddle_2_coord = paddle_2.getBoundingClientRect(); 
+    } 
+  } 
+});</code>
+                    </pre>
+                </div>
+
+                <p class="main__text">
+                    <strong>Wat gebeurt hier?</strong><br>
+                    Deze code luistert naar toetsaanslagen en reageert daarop:
+                </p>
+                <ul class="main__list">
+                    <li class="main__list-item">De <code>Enter</code>-toets start of pauzeert het spel</li>
+                    <li class="main__list-item">De <code>Z</code> en <code>S</code> toetsen bewegen de linker paddle
+                        omhoog en omlaag</li>
+                    <li class="main__list-item">De <code>Pijltje omhoog</code> en <code>Pijltje omlaag</code> toetsen
+                        bewegen de rechter paddle</li>
+                </ul>
+
+                <p class="main__text">
+                    Als het spel start, gebruikt <code>requestAnimationFrame()</code> om de <code>moveBall</code>
+                    functie aan te roepen,
+                    die de bal laat bewegen. We gebruiken <code>Math.max()</code> en <code>Math.min()</code> om ervoor
+                    te zorgen dat
+                    de paddles niet buiten het speelveld kunnen komen.
+                </p>
+
+                <h3 class="main__subtitle">3.5 De bal laten bewegen</h3>
+                <p class="main__text">
+                    Tot slot hebben we de functie die de bal beweegt en controleert op botsingen:
+                </p>
+
+                <div class="code-container">
+                    <div class="code-container__header">
+                        <span>JavaScript Code - Ball Movement</span>
+                        <button class="code-container__button" onclick="copyCode('js-movement')">Kopieer code</button>
+                    </div>
+                    <pre class="code-container__content">
+                        <code id="js-movement">
+function moveBall(dx, dy, dxd, dyd) { 
+  // Controleer botsing met bovenkant van het veld
+  if (ball_coord.top <= board_coord.top) { 
+    dyd = 1; // verander richting naar beneden
+  } 
+  // Controleer botsing met onderkant van het veld
+  if (ball_coord.bottom >= board_coord.bottom) { 
+    dyd = 0; // verander richting naar boven
+  } 
+  
+  // Controleer botsing met linker paddle (paddle 1)
+  if ( 
+    ball_coord.left <= paddle_1_coord.right && 
+    ball_coord.top >= paddle_1_coord.top && 
+    ball_coord.bottom <= paddle_1_coord.bottom 
+  ) { 
+    dxd = 1; // verander richting naar rechts
+    dx = Math.floor(Math.random() * 4) + 3; 
+    dy = Math.floor(Math.random() * 4) + 3; 
+  } 
+  
+  // Controleer botsing met rechter paddle (paddle 2)
+  if ( 
+    ball_coord.right >= paddle_2_coord.left && 
+    ball_coord.top >= paddle_2_coord.top && 
+    ball_coord.bottom <= paddle_2_coord.bottom 
+  ) { 
+    dxd = 0; // verander richting naar links
+    dx = Math.floor(Math.random() * 4) + 3; 
+    dy = Math.floor(Math.random() * 4) + 3; 
+  } 
+  
+  // Controleer of de bal het speelveld verlaat (punt gescoord)
+  if ( 
+    ball_coord.left <= board_coord.left || 
+    ball_coord.right >= board_coord.right 
+  ) { 
+    // Verhoog score van de juiste speler
+    if (ball_coord.left <= board_coord.left) { 
+      score_2.innerHTML = +score_2.innerHTML + 1; 
+    } else { 
+      score_1.innerHTML = +score_1.innerHTML + 1; 
+    } 
+    gameState = 'start'; 
+    
+    // Reset de bal naar beginpositie
+    ball_coord = initial_ball_coord; 
+    ball.style = initial_ball.style; 
+    message.innerHTML = 'Press Enter to Play Pong'; 
+    message.style.left = 38 + 'vw'; 
+    return; 
+  } 
+  
+  // Beweeg de bal volgens snelheid en richting
+  ball.style.top = ball_coord.top + dy * (dyd == 0 ? -1 : 1) + 'px'; 
+  ball.style.left = ball_coord.left + dx * (dxd == 0 ? -1 : 1) + 'px'; 
+  ball_coord = ball.getBoundingClientRect(); 
+  
+  // Roep deze functie opnieuw aan voor de volgende animatie-frame
+  requestAnimationFrame(() => { 
+    moveBall(dx, dy, dxd, dyd); 
+  }); 
+}</code>
+                    </pre>
+                </div>
+
+                <p class="main__text">
+                    <strong>Hoe werkt deze functie?</strong>
+                </p>
+                <ul class="main__list">
+                    <li class="main__list-item"><strong>Muur collisions:</strong> Als de bal de boven- of onderkant van
+                        het speelveld raakt, stuitert de bal terug door de richting om te keren</li>
+                    <li class="main__list-item"><strong>Paddle collisions:</strong> Als de bal een paddle raakt,
+                        stuitert de bal in de andere richting</li>
+                    <li class="main__list-item"><strong>Scoring:</strong> Als de bal de linker- of rechterkant van het
+                        speelveld raakt, is er een punt gescoord voor de tegenspeler</li>
+                    <li class="main__list-item"><strong>Animatie:</strong> <code>requestAnimationFrame()</code> zorgt
+                        voor een soepele animatie door de functie steeds opnieuw aan te roepen</li>
+                </ul>
+
+                <h3 class="main__subtitle">3.6 Het volledige script</h3>
+                <p class="main__text">
+                    Nu je alle onderdelen begrijpt, heb je hier het volledige JavaScript bestand. Kopieer deze code naar
+                    je <strong>main.js</strong> bestand:
+                </p>
+
+                <div class="code-container">
+                    <div class="code-container__header">
+                        <span>Volledige JavaScript Code</span>
+                        <button class="code-container__button" onclick="copyCode('js-full')">Kopieer code</button>
+                    </div>
+                    <pre class="code-container__content">
+                        <code id="js-full">
+let gameState = 'start'; 
+let paddle_1 = document.querySelector('.paddle_1'); 
+let paddle_2 = document.querySelector('.paddle_2'); 
+let board = document.querySelector('.board'); 
+let initial_ball = document.querySelector('.ball'); 
+let ball = document.querySelector('.ball'); 
+let score_1 = document.querySelector('.player_1_score'); 
+let score_2 = document.querySelector('.player_2_score'); 
+let message = document.querySelector('.message'); 
+let paddle_1_coord = paddle_1.getBoundingClientRect(); 
+let paddle_2_coord = paddle_2.getBoundingClientRect(); 
+let initial_ball_coord = ball.getBoundingClientRect(); 
+let ball_coord = initial_ball_coord; 
+let board_coord = board.getBoundingClientRect(); 
+let paddle_common = 
+    document.querySelector('.paddle').getBoundingClientRect(); 
+  
+let dx = Math.floor(Math.random() * 4) + 3; 
+let dy = Math.floor(Math.random() * 4) + 3; 
+let dxd = Math.floor(Math.random() * 2); 
+let dyd = Math.floor(Math.random() * 2); 
+  
+document.addEventListener('keydown', (e) => { 
+if (e.key == 'Enter') { 
+    gameState = gameState == 'start' ? 'play' : 'start'; 
+    if (gameState == 'play') { 
+    message.innerHTML = 'Game Started'; 
+    message.style.left = 42 + 'vw'; 
+    requestAnimationFrame(() => { 
+        dx = Math.floor(Math.random() * 4) + 3; 
+        dy = Math.floor(Math.random() * 4) + 3; 
+        dxd = Math.floor(Math.random() * 2); 
+        dyd = Math.floor(Math.random() * 2); 
+        moveBall(dx, dy, dxd, dyd); 
+    }); 
+    } 
+} 
+if (gameState == 'play') { 
+    if (e.key == 'z') { 
+    paddle_1.style.top = 
+        Math.max( 
+        board_coord.top, 
+        paddle_1_coord.top - window.innerHeight * 0.06 
+        ) + 'px'; 
+    paddle_1_coord = paddle_1.getBoundingClientRect(); 
+    } 
+    if (e.key == 's') { 
+    paddle_1.style.top = 
+        Math.min( 
+        board_coord.bottom - paddle_common.height, 
+        paddle_1_coord.top + window.innerHeight * 0.06 
+        ) + 'px'; 
+    paddle_1_coord = paddle_1.getBoundingClientRect(); 
+    } 
+  
+    if (e.key == 'ArrowUp') { 
+    paddle_2.style.top = 
+        Math.max( 
+        board_coord.top, 
+        paddle_2_coord.top - window.innerHeight * 0.1 
+        ) + 'px'; 
+    paddle_2_coord = paddle_2.getBoundingClientRect(); 
+    } 
+    if (e.key == 'ArrowDown') { 
+    paddle_2.style.top = 
+        Math.min( 
+        board_coord.bottom - paddle_common.height, 
+        paddle_2_coord.top + window.innerHeight * 0.1 
+        ) + 'px'; 
+    paddle_2_coord = paddle_2.getBoundingClientRect(); 
+    } 
+} 
+}); 
+  
+function moveBall(dx, dy, dxd, dyd) { 
+if (ball_coord.top <= board_coord.top) { 
+    dyd = 1; 
+} 
+if (ball_coord.bottom >= board_coord.bottom) { 
+    dyd = 0; 
+} 
+if ( 
+    ball_coord.left <= paddle_1_coord.right && 
+    ball_coord.top >= paddle_1_coord.top && 
+    ball_coord.bottom <= paddle_1_coord.bottom 
+) { 
+    dxd = 1; 
+    dx = Math.floor(Math.random() * 4) + 3; 
+    dy = Math.floor(Math.random() * 4) + 3; 
+} 
+if ( 
+    ball_coord.right >= paddle_2_coord.left && 
+    ball_coord.top >= paddle_2_coord.top && 
+    ball_coord.bottom <= paddle_2_coord.bottom 
+) { 
+    dxd = 0; 
+    dx = Math.floor(Math.random() * 4) + 3; 
+    dy = Math.floor(Math.random() * 4) + 3; 
+} 
+if ( 
+    ball_coord.left <= board_coord.left || 
+    ball_coord.right >= board_coord.right 
+) { 
+    if (ball_coord.left <= board_coord.left) { 
+    score_2.innerHTML = +score_2.innerHTML + 1; 
+    } else { 
+    score_1.innerHTML = +score_1.innerHTML + 1; 
+    } 
+    gameState = 'start'; 
+  
+    ball_coord = initial_ball_coord; 
+    ball.style = initial_ball.style; 
+    message.innerHTML = 'Press Enter to Play Pong'; 
+    message.style.left = 38 + 'vw'; 
+    return; 
+} 
+ball.style.top = ball_coord.top + dy * (dyd == 0 ? -1 : 1) + 'px'; 
+ball.style.left = ball_coord.left + dx * (dxd == 0 ? -1 : 1) + 'px'; 
+ball_coord = ball.getBoundingClientRect(); 
+requestAnimationFrame(() => { 
+    moveBall(dx, dy, dxd, dyd); 
+}); 
+}</code>
+                    </pre>
+                </div>
+
+                <h3 class="main__subtitle">3.7 HTML aanpassen</h3>
+                <p class="main__text">
+                    Tot slot moeten we ervoor zorgen dat de HTML het script inlaadt. Voeg deze regel toe onderaan je
+                    <strong>index.html</strong> bestand, net voor de sluit-tag van de body:
+                </p>
+
+                <div class="code-container">
+                    <div class="code-container__header">
+                        <span>HTML Script tag</span>
+                        <button class="code-container__button" onclick="copyCode('html-script')">Kopieer code</button>
+                    </div>
+                    <pre class="code-container__content">
+                        <code id="html-script">&lt;script src="./js/main.js"&gt;&lt;/script&gt;</code>
+                    </pre>
+                </div>
+
+                <h3 class="main__subtitle">3.8 Het spel testen</h3>
+                <p class="main__text">
+                    Nu kan je het spel testen! Rechts bovenaan zie je een link naar "Speel Pong". Als je daarop klikt,
+                    kom je in het spel terecht.
+                </p>
+                <p class="main__text">
+                    <strong>Geheugensteuntje voor de bediening:</strong>
+                </p>
+                <ul class="main__list">
+                    <li class="main__list-item"><code>Enter</code> - Start het spel</li>
+                    <li class="main__list-item"><code>Z</code> en <code>S</code> - Beweeg de linker paddle omhoog en
+                        omlaag</li>
+                    <li class="main__list-item"><code>Pijltje omhoog</code> en <code>Pijltje omlaag</code> - Beweeg de
+                        rechter paddle</li>
+                </ul>
+                <p class="main__text">
+                    Veel plezier met je eigen Pong spel!
+                </p>
+            </div>
+        </section>
     </main>
     <script src="js/copy.js"></script>
 </body>

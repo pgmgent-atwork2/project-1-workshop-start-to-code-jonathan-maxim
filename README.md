@@ -1,8 +1,5 @@
-https://pgmgent-atwork2.github.io/project-1-workshop-start-to-code-jonathan-maxim/
-
-[Figma](https://www.figma.com/board/NvkMh5FoeWSleDGfwErWA2/tutorial?node-id=0-1&t=2o4YunJ754N8Tij8-1)
-# [Tutorial](https://pgmgent-atwork2.github.io/project-1-workshop-start-to-code-jonathan-maxim/)
-
+## [Tutorial](https://pgmgent-atwork2.github.io/project-1-workshop-start-to-code-jonathan-maxim/)
+## [Figma](https://www.figma.com/board/NvkMh5FoeWSleDGfwErWA2/tutorial?node-id=0-1&t=2o4YunJ754N8Tij8-1)
 ## Toelichting project pong
 In dit project is het de bedoeling dat je een eigen versie van het spel pong maakt. Het spel moet voldoen aan de volgende eisen:
 - De speler kan bewegen met de pijltjestoetsen en Z en S

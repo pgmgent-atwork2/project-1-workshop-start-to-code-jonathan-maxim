@@ -84,9 +84,126 @@
                 <h3 class="main__subtitle">2.1 HTML</h3>
 
                 <p class="main__text">
-                    Ga naar je <strong>index.html</strong> file en plak onderstaande code
-                    hierin en <strong>bewaar</strong> dit bestand.
+                    HTML (HyperText Markup Language) is de basistaal voor webpagina's. Het werkt met "tags" die
+                    de browser vertellen welke elementen er op je pagina moeten staan, zoals tekst, afbeeldingen, of
+                    knopjes.
                 </p>
+
+                <p class="main__text">
+                    Voor ons Pong spel hebben we HTML nodig om:
+                </p>
+                <ul class="main__list">
+                    <li class="main__list-item">De speelruimte (het speelveld) te maken</li>
+                    <li class="main__list-item">De twee paddles te plaatsen</li>
+                    <li class="main__list-item">De bal te tonen</li>
+                    <li class="main__list-item">De score bij te houden</li>
+                    <li class="main__list-item">Instructies voor de spelers weer te geven</li>
+                </ul>
+
+                <p class="main__text">
+                    Ga naar je <strong>index.html</strong> file en plak onderstaande code
+                    hierin en <strong>bewaar</strong> dit bestand. Dit is de HTML-structuur voor ons spel.
+                </p>
+
+                <p class="main__text">
+                    <strong>Korte uitleg van de belangrijkste onderdelen in deze code:</strong>
+                </p>
+                <ul class="main__list">
+                    <li class="main__list-item"><code>&lt;!DOCTYPE html&gt;</code> - Vertelt de browser dat we moderne
+                        HTML gebruiken</li>
+                    <li class="main__list-item"><code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>,
+                        <code>&lt;body&gt;</code> - De basisstructuur van elke webpagina
+                    </li>
+                    <li class="main__list-item"><code>&lt;div class="board"&gt;</code> - Maakt het speelveld</li>
+                    <li class="main__list-item"><code>&lt;div class="ball"&gt;</code> - Voegt de bal toe</li>
+                    <li class="main__list-item"><code>&lt;div class="paddle_1 paddle"&gt;</code> en
+                        <code>&lt;div class="paddle_2 paddle"&gt;</code> - Voegen de twee paddles toe
+                    </li>
+                    <li class="main__list-item"><code>&lt;h1 class="message"&gt;</code> - Toont instructies aan de
+                        spelers</li>
+                </ul>
+
+                <h4 class="main__subtitle">Uitleg van de classes in onze HTML</h4>
+                <p class="main__text">
+                    Classes in HTML zijn als labels die we aan elementen geven. Ze helpen ons om:
+                </p>
+                <ul class="main__list">
+                    <li class="main__list-item">Elementen te stylen met CSS</li>
+                    <li class="main__list-item">Elementen te selecteren met JavaScript</li>
+                </ul>
+
+                <p class="main__text">
+                    Laten we de classes in onze Pong-game bekijken:
+                </p>
+
+                <table class="main__table">
+                    <tr>
+                        <th>Class</th>
+                        <th>Doel</th>
+                        <th>Hoe het gebruikt wordt</th>
+                    </tr>
+                    <tr>
+                        <td><code>board</code></td>
+                        <td>Het speelveld maken</td>
+                        <td>Deze krijgt in CSS een zwarte achtergrond en bepaalde afmetingen. In JavaScript gebruiken we
+                            het om te detecteren wanneer de bal het speelveld verlaat.</td>
+                    </tr>
+                    <tr>
+                        <td><code>ball</code></td>
+                        <td>De spelbal weergeven</td>
+                        <td>Deze krijgt in CSS een ronde vorm en witte kleur. In JavaScript bepalen we de beweging van
+                            dit element.</td>
+                    </tr>
+                    <tr>
+                        <td><code>ball_effect</code></td>
+                        <td>Visueel effect voor de bal</td>
+                        <td>Deze class zorgt ervoor dat de bal er mooi uitziet met de juiste kleuren en vormen.</td>
+                    </tr>
+                    <tr>
+                        <td><code>paddle</code></td>
+                        <td>Gemeenschappelijke eigenschappen van beide paddles</td>
+                        <td>Deze class bepaalt de basisstijl die beide paddles delen, zoals de breedte, hoogte en kleur.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>paddle_1</code></td>
+                        <td>De linker paddle (speler 1)</td>
+                        <td>Specifieke positionering voor de linker paddle. In JavaScript koppelen we dit aan de Z/S
+                            toetsen.</td>
+                    </tr>
+                    <tr>
+                        <td><code>paddle_2</code></td>
+                        <td>De rechter paddle (speler 2)</td>
+                        <td>Specifieke positionering voor de rechter paddle. In JavaScript koppelen we dit aan de
+                            pijltjestoetsen.</td>
+                    </tr>
+                    <tr>
+                        <td><code>player_1_score</code></td>
+                        <td>Score van speler 1</td>
+                        <td>Toont de score van de linker speler. In JavaScript verhogen we deze waarde wanneer speler 1
+                            scoort.</td>
+                    </tr>
+                    <tr>
+                        <td><code>player_2_score</code></td>
+                        <td>Score van speler 2</td>
+                        <td>Toont de score van de rechter speler. In JavaScript verhogen we deze waarde wanneer speler 2
+                            scoort.</td>
+                    </tr>
+                    <tr>
+                        <td><code>message</code></td>
+                        <td>Instructies en statusberichten</td>
+                        <td>Toont berichten zoals "Druk Enter om te beginnen" of "Game Started". In JavaScript passen we
+                            deze tekst aan afhankelijk van de spelstatus.</td>
+                    </tr>
+                </table>
+
+                <p class="main__text">
+                    Door deze classes te gebruiken, kunnen we specifieke elementen in ons spel aanspreken en aanpassen.
+                    In de JavaScript-code selecteren we deze elementen met
+                    <code>document.querySelector('.class-naam')</code>
+                    en in CSS gebruiken we de selector <code>.class-naam</code> om de stijl ervan te bepalen.
+                </p>
+
                 <div class="code-container">
                     <div class="code-container__header">
                         <span>HTML Code</span>
@@ -128,14 +245,138 @@
 
                 <h3 class="main__subtitle">2.2 CSS</h3>
                 <p class="main__text">
-                    We gaan nu onze <strong>css</strong> toevoegen. Dit zal ervoor zorgen
-                    dat ons <strong>spel</strong> zichtbaar wordt en onze titel in
-                    het midden staat.
+                    CSS (Cascading Style Sheets) is wat een webpagina mooi maakt. Terwijl HTML de structuur bouwt,
+                    maakt CSS het allemaal mooi met kleuren, vormen, posities en animaties.
                 </p>
+
                 <p class="main__text">
-                    Ga in vs code naar je <strong>css folder</strong> en open
+                    Voor ons Pong spel gebruiken we CSS om:
+                </p>
+                <ul class="main__list">
+                    <li class="main__list-item">Het speelveld zwart te maken (zoals de originele arcadespellen)</li>
+                    <li class="main__list-item">De paddles en bal wit te maken, met de juiste afmetingen</li>
+                    <li class="main__list-item">Alles op de juiste positie te plaatsen</li>
+                    <li class="main__list-item">De score en instructies leesbaar weer te geven</li>
+                </ul>
+
+                <p class="main__text">
+                    <strong>Hoe werkt CSS?</strong> CSS-regels bestaan uit een selector (wat je wilt aanpassen) en
+                    blokken met eigenschappen
+                    (hoe je het wilt aanpassen):
+                </p>
+
+                <p class="main__text"
+                    style="margin-left: 20px; font-family: monospace; background-color: #f0f0f0; padding: 10px; border-radius: 5px;">
+                    <code>.board {</code> → Dit selecteert het element met class="board"<br>
+                    <code>&nbsp;&nbsp;height: 85vh;</code> → Dit maakt het 85% van de schermhoogte<br>
+                    <code>&nbsp;&nbsp;background-color: black;</code> → Dit maakt het zwart<br>
+                    <code>}</code> → Dit sluit het stijlblok af
+                </p>
+
+                <p class="main__text">
+                    Ga in VS Code naar je <strong>css folder</strong> en open
                     <strong>main.css</strong> en plak onderstaande code hierin en
-                    <strong>bewaar dit bestand</strong>.
+                    <strong>bewaar dit bestand</strong>. Dit zijn alle stijlen die ons spel er geweldig laten uitzien!
+                </p>
+
+                <p class="main__text">
+                    <strong>Interessante onderdelen in deze CSS:</strong>
+                </p>
+                <ul class="main__list">
+                    <li class="main__list-item"><code>position: fixed;</code> - Zorgt ervoor dat elementen zoals de bal
+                        en paddles op exacte posities geplaatst kunnen worden</li>
+                    <li class="main__list-item"><code>border-radius: 50%;</code> - Maakt een vierkant element rond,
+                        zoals onze bal</li>
+                    <li class="main__list-item"><code>@keyframes</code> - Wordt gebruikt om animaties te maken (in dit
+                        geval voor de draaiende bal)</li>
+                    <li class="main__list-item"><code>calc()</code> - Een CSS-functie die berekeningen uitvoert, handig
+                        voor het positioneren van elementen</li>
+                </ul>
+
+                <h4 class="main__subtitle">Uitleg van de CSS-code:</h4>
+
+                <div class="css-explanation">
+                    <h5 class="css-rule-title">Body styling</h5>
+                    <pre class="css-rule-code">body {
+    background-color: red;
+    background-image: linear-gradient(to bottom right, hsl(0, 100%, 50%), hsl(60, 100%, 50%));
+    background-repeat: no-repeat;
+    max-width: 77rem;
+    margin-left: auto;
+    margin-right: auto;
+}</pre>
+                    <p>De code hierboven maakt de achtergrond van de pagina. De achtergrond heeft een kleurovergang van
+                        rood naar geel. De <code>max-width</code> zorgt ervoor dat de inhoud niet te breed wordt, en
+                        <code>margin-left: auto; margin-right: auto;</code> centreert alles.
+                    </p>
+                </div>
+
+                <div class="css-explanation">
+                    <h5 class="css-rule-title">Het Speelveld</h5>
+                    <pre class="css-rule-code">.board {
+    height: 85vh;
+    width: 80vw;
+    background-color: black;
+    border-radius: 0.875rem;
+}</pre>
+                    <p>Dit maakt het zwarte speelveld waar ons spel in plaatsvindt. De hoogte is 85% van de schermhoogte
+                        (vh) en de breedte is 80% van de schermbreedte (vw). De <code>border-radius</code> maakt de
+                        hoeken rond.</p>
+                </div>
+
+                <div class="css-explanation">
+                    <h5 class="css-rule-title">De Bal</h5>
+                    <pre class="css-rule-code">.ball {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    position: fixed;
+    top: calc(50% - 15px);
+    left: calc(50% - 15px);
+}</pre>
+                    <p>Deze code maakt een bal met een grootte van 30×30 pixels. De <code>border-radius: 50%</code>
+                        maakt de vierkante div rond. Met <code>position: fixed</code> kunnen we de bal overal op het
+                        scherm plaatsen. <code>calc(50% - 15px)</code> plaatst de bal precies in het midden.</p>
+                </div>
+
+                <div class="css-explanation">
+                    <h5 class="css-rule-title">De Paddles</h5>
+                    <pre class="css-rule-code">.paddle {
+    height: 100px;
+    width: 18px;
+    position: fixed;
+}
+
+.paddle_1 {
+    top: calc(7.5vh + 55px);
+    left: calc(10vw + 30px);
+    background-color: white;
+}</pre>
+                    <p>De code voor de paddles maakt twee balken van 100px hoog en 18px breed. De <code>.paddle</code>
+                        class bevat de gemeenschappelijke stijl voor beide paddles. <code>.paddle_1</code> en
+                        <code>.paddle_2</code> bepalen de posities van elke paddle.
+                    </p>
+                </div>
+
+                <div class="css-explanation">
+                    <h5 class="css-rule-title">Scores en Berichten</h5>
+                    <pre class="css-rule-code">.player_1_score, .player_2_score {
+    color: white;
+    position: fixed;
+}
+
+.message {
+    position: fixed;
+    color: white;
+}</pre>
+                    <p>Deze code zorgt voor de weergave van de scores en instructies. Alle tekst is wit zodat het goed
+                        zichtbaar is op het zwarte speelveld. De scores en het bericht worden op vaste posities
+                        geplaatst.</p>
+                </div>
+
+                <p class="main__text">
+                    <strong>Samenvatting:</strong> De CSS-code hierboven maakt alle visuele elementen van ons Pong-spel:
+                    een zwart speelveld, een witte bal, twee paddles en de tekst voor scores en instructies.
                 </p>
 
                 <div class="code-container">

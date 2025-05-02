@@ -278,3 +278,64 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+/* Table styling for class explanations */
+.main__table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.main__table th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+.main__table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.main__table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.main__table tr:hover {
+  background-color: #f0f0f0;
+}
+
+/* CSS Explanation styling - simplified version */
+.css-explanation {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-left: 3px solid #3498db;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.css-rule-title {
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+}
+
+.css-rule-code {
+  background-color: #f5f5f5;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-family: monospace;
+  white-space: pre;
+  font-size: 1.05rem;
+}
+
+.css-explanation p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.css-explanation code {
+  font-size: 1.05rem;
+}

@@ -279,7 +279,6 @@ body {
   justify-content: center;
 }
 
-/* Table styling for class explanations */
 .main__table {
   width: 100%;
   border-collapse: collapse;
@@ -307,7 +306,6 @@ body {
   background-color: #f0f0f0;
 }
 
-/* CSS Explanation styling - simplified version */
 .css-explanation {
   margin-bottom: 20px;
   padding: 10px;
